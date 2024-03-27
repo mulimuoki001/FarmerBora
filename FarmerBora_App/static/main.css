@@ -93,7 +93,7 @@
   body{
   margin:0;
   color:#6a6f8c;
-  background-image: url('images/bg.png');
+ 
   font:600 16px/18px 'Open Sans',sans-serif;
   }
   *,:after,:before{box-sizing:border-box}
@@ -175,7 +175,7 @@
   background:rgba(255,255,255,.1);
   }
   .login-form .group input[data-type="password"]{
-  text-security:circle;
+  
   -webkit-text-security:circle;
   }
   .login-form .group .label{
@@ -250,9 +250,7 @@
   
   
  
-  @function remy($value) {
-  @return ($value / 16px) * 1rem;
-  }
+  
   
   body {
   font: 100% / 1.414 "Open Sans", "Roboto", arial, sans-serif;
