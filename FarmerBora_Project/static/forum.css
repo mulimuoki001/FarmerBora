@@ -1,0 +1,665 @@
+/* global */
+@import url('https://fonts.googleapis.com/css2?family=Ephesis&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Vina+Sans&display=swap');
+:root{
+   --main-color:#8e44ad;
+   --red:#e74c3c;
+   --orange:#f39c12;
+   --light-color:#888;
+   --light-bg:#eee;
+   --black:#2c3e50;
+   --white:#fff;
+   --border:.1rem solid rgba(0,0,0,.2);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 14px;
+    font-family:"Oswald", sans-serif;
+    background-color: rgb(180, 175, 175);
+    color: white;
+};
+
+h1{
+    font-size: 16px ;
+    font-weight: bolder;
+
+}
+
+/* Forum.html */
+.container{
+    margin: 20px;
+    padding: 20px;
+}
+
+.subforum{
+    margin-top: 20px;
+
+}
+.subforum-link{
+    color: rgb(155, 4, 4);
+    font-weight: bolder;
+    text-decoration: none;
+}
+.subforum-header{
+    background-color: #575858;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 4px;
+}
+.subforum-description *{
+    margin-block: 0;
+}
+.subforum-row{
+    display: grid;
+    grid-template-columns: 7% 60% 13% 20%;
+
+}
+
+.subforum-column{
+    padding: 10px;
+    margin: 4px;
+    border-radius: 5px;
+    background-color: #252a2c;
+}
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.subforum-icon i{
+    font-size: 45px;
+}
+
+.subforum-line{
+    display: block;
+    border: 0;
+    height: 2px;
+    background-image: linear-gradient(to right, rgba(190,190,190, 0), rgba(12, 12, 12, 0.75), rgba(190,190, 190, 0));
+
+}
+@media screen and (max-width: 800px){
+    .subforum-icon i{
+        font-size: 25px;
+    }
+    
+}
+@media screen and (min-width: 270px) and (max-width: 310px){
+    .subforum-stats{
+        font-size: 10px;
+    }
+}
+@media screen and (min-width: 210px) and (max-width: 250px){
+    .subforum-stats{
+        font-size: 8px;
+    }
+}
+@media screen and (min-width: 145px) and (max-width: 200px){
+    .subforum-stats{
+        font-size: 4px;
+    }
+}
+@media screen and (max-width: 560px){
+    .container{
+        margin: 10px;
+        padding: 10px;
+    }
+    .subforum-row{
+        display: grid;
+        grid-template-columns: 25% 75%;
+        grid-template-rows: 65% 35%;
+    }
+    .subforum-icon{
+        font-size: 30px;
+    }
+}
+@media screen and (max-width: 285px){
+    .container{
+        margin: 7px;
+        padding: 7px;
+    }
+    
+    html{
+        font-size: 10px;
+    };
+}
+@media screen and (max-width: 220px){
+    html{
+        font-size: 7px;   
+    };
+    .subforum-stats{
+        font-size: 10px;
+    }
+    
+}
+@media screen and (min-width: 145px) and (max-width: 180px){
+    .container{
+        margin: 5px;
+        padding: 5px;
+    }
+    
+    html{
+        font-size: 5px;
+    };
+}
+
+/* NAVIGATION BAR*/
+header{
+    margin-inline: 10px;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+}
+.navigation{
+    background-color: rgb(54, 50, 50);
+    padding: 10px;
+    width: 65%;
+    display: inline-block;
+    border-radius: 5px;
+    margin-right: 10px;
+    max-height: 80px;
+}
+.nav-list{
+    list-style-type: none;
+    overflow: hidden;
+}
+
+.nav-item a{
+    
+    float: left;
+    color:white;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 15px;
+    margin-inline: 10px;
+
+}
+.nav-item a:hover{
+    color: red;
+}
+ 
+.close-icon i{
+    float: left;
+    font-size: 60px;
+    cursor: pointer;
+}
+.hide{
+    display: none;
+}
+.bar-icon i{
+    display: inline-block;
+    font-size: 60px;
+    cursor: pointer;
+    color: white;
+    margin-right: 10px;
+}
+
+@font-face{
+    font-family: aquire;
+    src: url(Aquire-BW0ox.otf);
+}
+.brand{
+    font-size: 60px;
+    display: inline-block;
+    font-family: aquire;
+}
+@media screen and (min-width: 965px) and (max-width: 1200px){
+    
+    .navigation{
+        padding: 1px;
+        width: 65%;
+        border-radius: 5px;
+        margin-right: 5px;
+        max-height: 60px;
+    }
+    .nav-item a{
+        font-size: 10px;
+        margin-inline: 1px;
+    
+    }
+    .close-icon i{
+        font-size: 25px;
+    }
+    
+}
+@media screen and (min-width: 500px) and (max-width: 965px){
+    .navigation{
+        padding: 1px;
+        width: 65%;
+        border-radius: 5px;
+        margin-right: 5px;
+        max-height: 250px;
+    }
+    .nav-item a{
+        font-size: 10px;
+        margin-inline: 1px;
+    
+    }
+    .close-icon i{
+        font-size: 15px;
+    }
+    .brand{
+        font-size: 50px;
+    }
+   
+}
+@media screen and (min-width: 430px) and (max-width: 500px){
+    .navigation{
+        padding: 1px;
+        width: 65%;
+        border-radius: 1px;
+        margin-right: 1px;
+        max-height: 400px;
+    }
+    .nav-item a{
+        font-size: 10px;
+        margin-inline: 1px;
+    
+    }
+    .close-icon i{
+        font-size: 15px;
+    }
+    .brand{
+        font-size: 40px;
+    }
+   
+}
+@media screen and (min-width: 360px) and (max-width: 430px){
+    .navigation{
+        padding: 1px;
+        width: 65%;
+        border-radius: 1px;
+        margin-right: 1px;
+        max-height: 400px;
+    }
+    .nav-item a{
+        font-size: 10px;
+        margin-inline: 1px;
+    
+    }
+    .close-icon i{
+        font-size: 15px;
+    }
+    .brand{
+        font-size: 30px;
+    }
+    .bar-icon i{
+        font-size: 30px;
+    }
+}
+@media screen and (min-width: 325px) and (max-width: 360px){
+    .navigation{
+        padding: 1px;
+        width: 65%;
+        border-radius: 1px;
+        margin-right: 1px;
+        max-height: 400px;
+    }
+    .nav-item a{
+        font-size: 10px;
+        margin-inline: 1px;
+    
+    }
+    .close-icon i{
+        font-size: 15px;
+    }
+    .brand{
+        font-size: 25px;
+    }
+    .bar-icon i{
+        font-size: 20px;
+    }
+}
+@media screen and (min-width: 200px) and (max-width: 325px){
+    .navigation{
+        padding: 1px;
+        width: 65%;
+        border-radius: 1px;
+        margin-right: 1px;
+        max-height: 400px;
+    }
+    .nav-item a{
+        font-size: 10px;
+        margin-inline: 1px;
+        margin-left: -20px;
+        margin-top: 5px;
+    
+    }
+    .close-icon i{
+        font-size: 15px;
+    }
+    .brand{
+        font-size: 20px;
+        display: flex;
+    }
+    
+    .bar-icon i{
+        font-size: 15px;
+    }
+}
+@media screen and (min-width: 145px) and (max-width: 200px){
+    .navigation{
+       justify-content: left;
+        width: 70%;
+        max-height: 450px;
+    }
+    .nav-item a{
+    font-size: 8px;
+     margin-left: -35px;
+    }
+    .close-icon i{
+        font-size: 10px;
+    }
+    .brand{
+        font-size: 10px;
+        display: flex;
+    }
+    .bar-icon i{
+        font-size: 15px;
+    }
+}
+ /*Search Box*/
+ .search-box{
+    background-color: #252a2c;
+    border: solid 1px#5c5a5e;
+    margin-top: 20px;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    box-shadow: 3px 4px 5px #585658;
+ }
+ .search-box select{
+    padding: 10px;
+ }
+.search-box input{
+    padding: 10px;
+}
+.search-box button{
+    padding: 10px;
+    background-color: #252a2c;
+    color: white;
+}
+.search-box button:hover{
+    background-color: #080808;
+    color: white;
+    box-shadow: 1px 2px 3px #52075b;
+}
+
+@media screen and (max-width: 460px){
+    .search-box input, .search-box button, .search-box select{
+       min-width: 300px;
+       margin-top: 5px;
+    }  
+    .search-box{ display: block;}
+}
+@media screen and (min-width:345px ) and  (max-width: 400px){
+    .search-box input, .search-box button, .search-box select{
+       max-width: 100px;
+       margin-top: 5px;
+       margin-left: -35px;
+    }  
+    .search-box{ 
+        display: block;
+        width: 600px;
+    }
+}
+@media screen and  (max-width: 345px){
+    .search-box input, .search-box select, .search-box button{
+       margin-top: 5px;
+       margin-left: -35px;
+       font-size: 10px;
+       box-sizing: border-box;
+    }  
+    .search-box select{
+        display: flex;
+    }
+    .search-box button{
+        display: flex;
+        justify-content: left;
+    }
+    .search-box{ 
+        display: inline-block;
+        width:fit-content;
+    }
+}
+
+/*Forum Info*/
+.forum-info{
+    padding: 20px;
+    background-color: #080808;
+}
+.chart{
+    font-size: 20px;
+    font-weight: bold;
+}
+.footer{
+    background-color: var(--white);
+    border-top: var(--border);
+    position: sticky;
+    bottom: 0; left: 0; right: 0;
+    text-align: center;
+    font-size: 2rem;
+    padding:2.5rem 2rem;
+    color:var(--black);
+    margin-top: 1rem;
+    z-index: 1000;
+    /* padding-bottom: 9.5rem; */
+ }
+ 
+ .footer span{
+    color:var(--main-color);
+ }
+ 
+
+/**************************************************************************/
+/* posts.html*/
+
+.table-head{
+    display: flex;
+}
+.table-head div{
+    padding: 5px;
+    margin: 2px;
+    background-color:rgb(54, 50, 50);
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.table-head .status{
+    flex: 5%;
+}
+
+.table-head .subjects{
+    flex: 70%;
+}
+
+.table-head .replies{
+    flex: 10%;
+}
+
+.table-head .last-reply{
+    flex: 15%;
+}
+
+/*******Table Body****************/
+.table-row{
+    display: flex;
+}
+.table-row .status, .table-row .subjects, .table-row .replies, .table-row .last-reply{
+    padding: 5px;
+    margin: 2px;
+    background-color:rgb(54, 50, 50);
+    color: white;
+}
+
+.table-row .status{
+    flex: 5%;
+    font-size: 25px;
+    text-align: center;
+}
+
+.table-row .subjects{
+    flex: 70%;
+}
+
+.table-row .replies{
+    flex: 10%;
+}
+
+.table-row .last-reply{
+    flex: 15%;
+}
+
+/***Pagination***/
+.pagination{
+   padding: 20px;
+   font-size: 15px;
+}
+.pagination a{
+    padding: 5px 10px;
+    margin-inline: 5px;
+    background-color:rgb(54, 50, 50);
+    color: white;
+    border: solid 1px #5c5a5e;
+    text-decoration: none;
+   
+}
+.pagination a:hover{
+    opacity: 0.5;
+}
+.pagination a.active{
+    background-color: #5c5a5e;
+    color: white;
+}
+.pagination a:first-child{
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+.pagination a:last-child{
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;    
+}
+
+/******Navigation*************/
+.navigate{
+    margin-block: 20px;
+    font-size: 24px;
+    font-weight: lighter;
+}
+
+.navigate a{
+    color: rgb(155, 33, 33);
+}
+.navigate a:hover{
+    color: rgb(104, 57, 57);
+    font-weight: bolder;
+}
+
+/***************note*******************************/
+
+.note{
+    background-color: #252a2c;
+    padding: 20px;
+    display: block;
+}
+
+.note span{
+    font-size: 20px;
+    margin-block: 5px;
+
+}
+@media screen and (max-width: 400px){
+    .note span{
+        font-size: 10px;
+    }
+    .pagination{
+        font-size: 10px;
+     }
+}
+@media screen and (max-width: 270px){
+    .pagination{
+       font-size: 5px;
+       display: flex;
+     }
+}
+
+
+/**********************************************/
+/*Details.html*/
+
+.head{
+    display: flex;
+    background-color: #252a2c;
+    padding: 5px;
+    font-weight: bold;
+    font-size: 15px;
+}
+.authors{
+    flex: 20%;
+}
+.content{
+    flex: 80%;
+}
+.body{
+    display: flex;
+    background-color: #080808;
+    padding: 10px;
+    margin-top: 5px;
+    color: white;
+}
+.body .authors .username{
+    font-size: 20px;
+}
+.body .authors img{
+    max-width: 50px;
+    max-height: 80px;
+}
+.body .comment .button{
+    border: none;
+    padding: 10px;
+    font-weight: bolder;
+    box-shadow: 4px 6px 8px #080808;
+    cursor: pointer;
+    float: right;
+    border-radius: 5px;
+}
+.body .comment .button:hover{
+    background-color: #0c0c0c;
+    color: white;
+    box-shadow: 2px 3px 3px 2px #080808;
+   
+}
+
+
+/*Comment*/
+.comment-area{
+    margin-top: 50px;
+}
+.comment{
+    width: 100%;
+    min-height: 100px;
+}
+.comment-area .text-area{
+    width: 100%;
+    min-height: 100px;
+    padding: 10px;
+    margin-block: 10px;
+}
+.comment-area input{
+    float: right;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.comment-area input:hover{
+    border: solid 2px #0c0c0c;
+}
+.comments-container{
+    margin-top: 50px;
+}
