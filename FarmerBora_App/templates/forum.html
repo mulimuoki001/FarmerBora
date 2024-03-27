@@ -1,0 +1,280 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FarmerBora Forum
+
+    </title>
+    <link rel="stylesheet" href="{% static 'forum.css' %}">
+    <link rel="shortcut icon" type="x-icon" href="{% static 'images/logo.png' %}">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+        integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Ephesis&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Vina+Sans&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/105291f51d.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <nav class="navigation hide" id="navigation">
+                <ul class="nav-list">
+                    <span class="close-icon" onclick="showIconBar()"><i class="fas fa-close"></i></span>
+                    <li class="nav-item"><a href="{% url 'index' %}">Home</a></li>
+
+                    <li class="nav-item"><a href="{% url 'diseases' %}">Diseases</a></li>
+                    <li class="nav-item"><a href="{% url 'posts' %}">Posts</a></li>
+                    <li class="nav-item"><a href="{% url 'details' %}">DETAILS</a></li>
+
+                    <li class="nav-item"><a href="{% url 'logout' %}">Logout</a></li>
+                </ul>
+            </nav>
+            <a href="#" class="bar-icon" id="iconBar" onclick="hideIconBar()"><i class=" fas fa-bars"></i></a>
+            <div class="brand notranslate">FarmerBora Forum</div>
+            <div class="translate" id="google_translate_element"></div>
+        </div>
+        <div class="search-box">
+            <div class="select1">
+                <select name="" id="">
+                    <option value="">Diseases</option>
+                    <option value="">Diseases</option>
+                    <option value="">Diseases</option>
+                    <option value="">Diseases</option>
+                </select>
+            </div>
+            <input type="text" name="q" id="" placeholder="Search...">
+            <button type="submit"><i class="fa fa-search"></i></button>
+
+        </div>
+    </header>
+    <div class="container">
+        <div class="subforum">
+            <div class="subforum-header">
+                <h1>General Information</h1>
+            </div>
+            <hr class="subforum-line">
+            <div class="subforum-row">
+                <div class="subforum-icon subforum-column center">
+                    <i class="fa-regular fa-user"></i>
+                </div>
+                <div class="subforum-description subforum-column">
+                    <h1><a href="#" class="subforum-link">Livestock Diseases: </a></h1>
+                    <p>Livestock diseases are conditions that affect the health of livestock.</p>
+                </div>
+                <div class="subforum-stats subforum-column center">
+                    <span>10 Posts | 15 Topics</span>
+                </div>
+                <div class="subforum-info subforum-column">
+                    <b><a href=" #" class="subforum-link">Last Post</a></b> by <a href="#"
+                        class="subforum-link">JustAUser</a>
+                    <br>
+                    1 hour ago
+                </div>
+            </div>
+            <hr class="subforum-line">
+            <div class="subforum-row">
+                <div class="subforum-icon subforum-column center">
+                    <i class="fa-regular fa-user"></i>
+                </div>
+                <div class="subforum-description subforum-column">
+                    <h1><a href="#" class="subforum-link">Livestock Diseases: </a></h1>
+                    <p>Livestock diseases are conditions that affect the health of livestock.</p>
+                </div>
+                <div class="subforum-stats subforum-column center">
+                    <span>10 Posts | 15 Topics</span>
+                </div>
+                <div class="subforum-info subforum-column">
+                    <b><a href=" #" class="subforum-link">Last Post</a></b> by <a href="#"
+                        class="subforum-link">JustAUser</a>
+                    <br>
+                    1 hour ago
+                </div>
+            </div>
+            <hr class="subforum-line">
+            <div class="subforum-row">
+                <div class="subforum-icon subforum-column center">
+                    <i class="fa-regular fa-user"></i>
+                </div>
+                <div class="subforum-description subforum-column">
+                    <h1><a href="#" class="subforum-link">Livestock Diseases: </a></h1>
+                    <p>Livestock diseases are conditions that affect the health of livestock.</p>
+                </div>
+                <div class="subforum-stats subforum-column center">
+                    <span>10 Posts | 15 Topics</span>
+                </div>
+                <div class="subforum-info subforum-column">
+                    <b><a href=" #" class="subforum-link">Last Post</a></b> by <a href="#"
+                        class="subforum-link">JustAUser</a>
+                    <br>
+                    1 hour ago
+                </div>
+            </div>
+            <hr class="subforum-line">
+            <div class="subforum-row">
+                <div class="subforum-icon subforum-column center">
+                    <i class="fa-regular fa-user"></i>
+                </div>
+                <div class="subforum-description subforum-column">
+                    <h1><a href="#" class="subforum-link">Livestock Diseases: </a></h1>
+                    <p>Livestock diseases are conditions that affect the health of livestock.</p>
+                </div>
+                <div class="subforum-stats subforum-column center">
+                    <span>10 Posts | 15 Topics</span>
+                </div>
+                <div class="subforum-info subforum-column">
+                    <b><a href=" #" class="subforum-link">Last Post</a></b> by <a href="#"
+                        class="subforum-link">JustAUser</a>
+                    <br>
+                    1 hour ago
+                </div>
+            </div>
+        </div>
+        <div class="subforum">
+            <div class="subforum-header">
+                <h1>General Information</h1>
+            </div>
+            <hr class="subforum-line">
+            <div class="subforum-row">
+                <div class="subforum-icon subforum-column center">
+                    <i class="fa-regular fa-user"></i>
+                </div>
+                <div class="subforum-description subforum-column">
+                    <h1><a href="#" class="subforum-link">Livestock Diseases: </a></h1>
+                    <p>Livestock diseases are conditions that affect the health of livestock.</p>
+                </div>
+                <div class="subforum-stats subforum-column center">
+                    <span>10 Posts | 15 Topics</span>
+                </div>
+                <div class="subforum-info subforum-column">
+                    <b><a href=" #" class="subforum-link">Last Post</a></b> by <a href="#"
+                        class="subforum-link">JustAUser</a>
+                    <br>
+                    1 hour ago
+                </div>
+            </div>
+            <hr class="subforum-line">
+            <div class="subforum-row">
+                <div class="subforum-icon subforum-column center">
+                    <i class="fa-regular fa-user"></i>
+                </div>
+                <div class="subforum-description subforum-column">
+                    <h1><a href="#" class="subforum-link">Livestock Diseases: </a></h1>
+                    <p>Livestock diseases are conditions that affect the health of livestock.</p>
+                </div>
+                <div class="subforum-stats subforum-column center">
+                    <span>10 Posts | 15 Topics</span>
+                </div>
+                <div class="subforum-info subforum-column">
+                    <b><a href=" #" class="subforum-link">Last Post</a></b> by <a href="#"
+                        class="subforum-link">JustAUser</a>
+                    <br>
+                    1 hour ago
+                </div>
+            </div>
+            <hr class="subforum-line">
+            <div class="subforum-row">
+                <div class="subforum-icon subforum-column center">
+                    <i class="fa-regular fa-user"></i>
+                </div>
+                <div class="subforum-description subforum-column">
+                    <h1><a href="#" class="subforum-link">Livestock Diseases: </a></h1>
+                    <p>Livestock diseases are conditions that affect the health of livestock.</p>
+                </div>
+                <div class="subforum-stats subforum-column center">
+                    <span>10 Posts | 15 Topics</span>
+                </div>
+                <div class="subforum-info subforum-column">
+                    <b><a href=" #" class="subforum-link">Last Post</a></b> by <a href="#"
+                        class="subforum-link">JustAUser</a>
+                    <br>
+                    1 hour ago
+                </div>
+            </div>
+        </div>
+        <div class="subforum">
+            <div class="subforum-header">
+                <h1>General Information</h1>
+            </div>
+            <hr class="subforum-line">
+            <div class="subforum-row">
+                <div class="subforum-icon subforum-column center">
+                    <i class="fa-regular fa-user"></i>
+                </div>
+                <div class="subforum-description subforum-column">
+                    <h1><a href="#" class="subforum-link">Livestock Diseases: </a></h1>
+                    <p>Livestock diseases are conditions that affect the health of livestock.</p>
+                </div>
+                <div class="subforum-stats subforum-column center">
+                    <span>10 Posts | 15 Topics</span>
+                </div>
+                <div class="subforum-info subforum-column">
+                    <b><a href=" #" class="subforum-link">Last Post</a></b> by <a href="#"
+                        class="subforum-link">JustAUser</a>
+                    <br>
+                    1 hour ago
+                </div>
+            </div>
+            <hr class="subforum-line">
+            <div class="subforum-row">
+                <div class="subforum-icon subforum-column center">
+                    <i class="fa-regular fa-user"></i>
+                </div>
+                <div class="subforum-description subforum-column">
+                    <h1><a href="#" class="subforum-link">Livestock Diseases: </a></h1>
+                    <p>Livestock diseases are conditions that affect the health of livestock.</p>
+                </div>
+                <div class="subforum-stats subforum-column center">
+                    <span>10 Posts | 15 Topics</span>
+                </div>
+                <div class="subforum-info subforum-column">
+                    <b><a href=" #" class="subforum-link">Last Post</a></b> by <a href="#"
+                        class="subforum-link">JustAUser</a>
+                    <br>
+                    1 hour ago
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!--------------FORUM INFO--------->
+    <div class="forum-info">
+        <div class="chart">
+            My Forum - Stats &nbsp;<i class="fa fa-bar-chart"></i>
+
+        </div>
+        <div>
+            <span><u>5,234</u>Posts in <u>15</u>Topics by<u>2,000</u> Users</span><br>
+            <span>Latest Post: <b><a href="#" class="subforum-link">Random Post</a></b> on 15 Dec 2021 by <a href="#"
+                    class="subforum-link">RandomUser</a></span>
+        </div>
+    </div>
+
+    <footer class="footer notranslate">
+
+        &copy; copyright @ 2024 by <span>FarmerBora - LH</span> | all rights reserved!
+
+    </footer>
+    <script src="{% static 'forum.js' %}">
+
+    </script>
+    <script type="text/javascript" src="{%static 'lang.js'%}"></script>
+
+    <script type="text/javascript"
+        src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
+
+</html>

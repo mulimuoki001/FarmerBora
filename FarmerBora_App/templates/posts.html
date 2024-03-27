@@ -1,0 +1,266 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FarmerBora Forum
+
+    </title>
+    <link rel="shortcut icon" type="x-icon" href="{% static 'images/logo.png' %}">
+    <link rel="stylesheet" href="{% static 'forum.css' %}">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+        integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Ephesis&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Vina+Sans&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/105291f51d.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <nav class="navigation hide" id="navigation">
+                <ul class="nav-list">
+                    <span class="close-icon" onclick="showIconBar()"><i class="fas fa-close"></i></span>
+                    <li class="nav-item"><a href="{% url 'index' %}">Home</a></li>
+
+                    <li class="nav-item"><a href="{% url 'diseases' %}">Diseases</a></li>
+                    <li class="nav-item"><a href="{% url 'posts' %}">Posts</a></li>
+                    <li class="nav-item"><a href="{% url 'details' %}">DETAILS</a></li>
+
+                    <li class="nav-item"><a href="{% url 'logout' %}">Logout</a></li>
+                </ul>
+            </nav>
+            <a href="#" class="bar-icon" id="iconBar" onclick="hideIconBar()"><i class=" fas fa-bars"></i></a>
+            <div class="brand  notranslate">FarmerBora Forum</div>
+            <div class="translate" id="google_translate_element"></div>
+        </div>
+        <div class="search-box">
+            <div class="select1">
+                <select name="" id="">
+                    <option value="">Diseases</option>
+                    <option value="">Diseases</option>
+                    <option value="">Diseases</option>
+                    <option value="">Diseases</option>
+                </select>
+            </div>
+            <input type="text" name="q" id="" placeholder="Search...">
+            <button type="submit"><i class="fa fa-search"></i></button>
+        </div>
+    </header>
+    <div class="container">
+        <!------------Navigation--------------->
+        <div class="navigate">
+            <span><a href="#" class="subforum-link">FarmerBora - Forums</a> >> <a href="#" class="subforum-link">Random
+                    Topic</a></span>
+        </div>
+        <div class="posts-table">
+            <div class="table-head">
+                <div class="status"><small>Status</small></div>
+                <div class="subjects">Subjects</div>
+                <div class="replies">Replies</div>
+                <div class="last-reply">Last Reply</div>
+            </div>
+            <div class="table-row">
+                <div class="status"><i class="fa fa-fire"></i></div>
+                <div class="subjects"><a href="#" class="subforum-link">Livestock Diseases</a> <br><span> Started by
+                        <b><a href="#" class="subforum-link">Farmer</a></b></span></div>
+
+
+                <div class="replies">10 replies <br> 125 views</div>
+                <div class="last-reply">1 hour ago <br> By <b><a href="#" class="subforum-link">Farmer</a></b></div>
+
+            </div>
+            <div class="table-row">
+                <div class="status"><i class="fa fa-book"></i></div>
+                <div class="subjects"><a href="#" class="subforum-link">Livestock Diseases</a> <br><span> Started by
+                        <b><a href="#" class="subforum-link">Farmer</a></b></span></div>
+
+
+                <div class="replies">10 replies <br> 125 views</div>
+                <div class="last-reply">1 hour ago <br> By <b><a href="#" class="subforum-link">Farmer</a></b></div>
+
+            </div>
+            <div class="table-row">
+                <div class="status"><i class="fa fa-rocket"></i></div>
+                <div class="subjects"><a href="#" class="subforum-link">Livestock Diseases</a> <br><span> Started by
+                        <b><a href="#" class="subforum-link">Farmer</a></b></span></div>
+
+
+                <div class="replies">10 replies <br> 125 views</div>
+                <div class="last-reply">1 hour ago <br> By <b><a href="#" class="subforum-link">Farmer</a></b></div>
+
+            </div>
+            <div class="table-row">
+                <div class="status"><i class="fa fa-frown-o"></i></div>
+                <div class="subjects"><a href="#" class="subforum-link">Livestock Diseases</a> <br><span> Started by
+                        <b><a href="#" class="subforum-link">Farmer</a></b></span></div>
+
+
+                <div class="replies">10 replies <br> 125 views</div>
+                <div class="last-reply">1 hour ago <br> By <b><a href="#" class="subforum-link">Farmer</a></b></div>
+
+            </div>
+            <div class="table-row">
+                <div class="status"><i class="fa fa-book"></i></div>
+                <div class="subjects"><a href="#" class="subforum-link">Livestock Diseases</a> <br><span> Started by
+                        <b><a href="#" class="subforum-link">Farmer</a></b></span></div>
+
+
+                <div class="replies">10 replies <br> 125 views</div>
+                <div class="last-reply">1 hour ago <br> By <b><a href="#" class="subforum-link">Farmer</a></b></div>
+
+            </div>
+            <div class="table-row">
+                <div class="status"><i class="fa fa-lock"></i></div>
+                <div class="subjects"><a href="#" class="subforum-link">Livestock Diseases</a> <br><span> Started by
+                        <b><a href="#" class="subforum-link">Farmer</a></b></span></div>
+
+
+                <div class="replies">10 replies <br> 125 views</div>
+                <div class="last-reply">1 hour ago <br> By <b><a href="#" class="subforum-link">Farmer</a></b></div>
+
+            </div>
+            <div class="table-row">
+                <div class="status"><i class="fa fa-fire"></i></div>
+                <div class="subjects"><a href="#" class="subforum-link">Livestock Diseases</a> <br><span> Started by
+                        <b><a href="#" class="subforum-link">Farmer</a></b></span></div>
+
+
+                <div class="replies">10 replies <br> 125 views</div>
+                <div class="last-reply">1 hour ago <br> By <b><a href="#" class="subforum-link">Farmer</a></b></div>
+
+            </div>
+            <div class="table-row">
+                <div class="status"><i class="fa fa-lock"></i></div>
+                <div class="subjects"><a href="#" class="subforum-link">Livestock Diseases</a> <br><span> Started by
+                        <b><a href="#" class="subforum-link">Farmer</a></b></span></div>
+
+
+                <div class="replies">10 replies <br> 125 views</div>
+                <div class="last-reply">1 hour ago <br> By <b><a href="#" class="subforum-link">Farmer</a></b></div>
+
+            </div>
+            <div class="table-row">
+                <div class="status"><i class="fa fa-frown-o"></i></div>
+                <div class="subjects"><a href="#" class="subforum-link">Livestock Diseases</a> <br><span> Started by
+                        <b><a href="#" class="subforum-link">Farmer</a></b></span></div>
+
+
+                <div class="replies">10 replies <br> 125 views</div>
+                <div class="last-reply">1 hour ago <br> By <b><a href="#" class="subforum-link">Farmer</a></b></div>
+
+            </div>
+            <div class="table-row">
+                <div class="status"><i class="fa fa-fire"></i></div>
+                <div class="subjects"><a href="#" class="subforum-link">Livestock Diseases</a> <br><span> Started by
+                        <b><a href="#" class="subforum-link">Farmer</a></b></span></div>
+
+
+                <div class="replies">10 replies <br> 125 views</div>
+                <div class="last-reply">1 hour ago <br> By <b><a href="#" class="subforum-link">Farmer</a></b></div>
+
+            </div>
+            <div class="table-row">
+                <div class="status"><i class="fa fa-rocket"></i></div>
+                <div class="subjects"><a href="#" class="subforum-link">Livestock Diseases</a> <br><span> Started by
+                        <b><a href="#" class="subforum-link">Farmer</a></b></span></div>
+
+
+                <div class="replies">10 replies <br> 125 views</div>
+                <div class="last-reply">1 hour ago <br> By <b><a href="#" class="subforum-link">Farmer</a></b></div>
+
+            </div>
+            <div class="table-row">
+                <div class="status"><i class="fa fa-book"></i></div>
+                <div class="subjects"><a href="#" class="subforum-link">Livestock Diseases</a> <br><span> Started by
+                        <b><a href="#" class="subforum-link">Farmer</a></b></span></div>
+
+
+                <div class="replies">10 replies <br> 125 views</div>
+                <div class="last-reply">1 hour ago <br> By <b><a href="#" class="subforum-link">Farmer</a></b></div>
+
+            </div>
+            <div class="table-row">
+                <div class="status"><i class="fa fa-fire"></i></div>
+                <div class="subjects"><a href="#" class="subforum-link">Livestock Diseases</a> <br><span> Started by
+                        <b><a href="#" class="subforum-link">Farmer</a></b></span></div>
+
+
+                <div class="replies">10 replies <br> 125 views</div>
+                <div class="last-reply">1 hour ago <br> By <b><a href="#" class="subforum-link">Farmer</a></b></div>
+
+            </div>
+            <div class="table-row">
+                <div class="status"><i class="fa fa-frown-o"></i></div>
+                <div class="subjects"><a href="#" class="subforum-link">Livestock Diseases</a> <br><span> Started by
+                        <b><a href="#" class="subforum-link">Farmer</a></b></span></div>
+
+
+                <div class="replies">10 replies <br> 125 views</div>
+                <div class="last-reply">1 hour ago <br> By <b><a href="#" class="subforum-link">Farmer</a></b></div>
+
+            </div>
+            <div class="table-row">
+                <div class="status"><i class="fa fa-fire"></i></div>
+                <div class="subjects"><a href="#" class="subforum-link">Livestock Diseases</a> <br><span> Started by
+                        <b><a href="#" class="subforum-link">Farmer</a></b></span>
+                </div>
+                <div class="replies">10 replies <br> 125 views
+                </div>
+                <div class="last-reply">1 hour ago <br> By <b><a href="#" class="subforum-link">Farmer</a></b>
+                </div>
+
+            </div>
+        </div>
+        <!--------------Pagination------------>
+        <div class="pagination">
+            pages: <a href="#">1</a> <a href="#">2</a> <a href="#">3</a>
+        </div>
+        <!--------------Status Note--------------->
+        <div class="note">
+            <span>
+                <i class="fa fa-frown-o"></i>&nbsp; 0 Engagement Topic<br>
+            </span>
+            <span>
+                <i class="fa fa-book"></i>&nbsp; Low Engagement Topic<br>
+            </span>
+            <span>
+                <i class="fa fa-fire"></i>&nbsp; Popular Topic<br>
+            </span>
+            <span>
+                <i class="fa fa-rocket"></i>&nbsp; High Engagement Topic<br>
+            </span>
+            <span>
+                <i class="fa fa-lock"></i>&nbsp; Closed Topic<br>
+            </span>
+        </div>
+    </div>
+
+    <footer class="footer notranslate">
+
+        &copy; copyright @ 2024 by <span>FarmerBora - LH</span> | all rights reserved!
+
+    </footer>
+    <script src="{% static 'forum.js' %}">
+
+    </script>
+    <script type="text/javascript" src="{%static 'lang.js'%}"></script>
+    <script type="text/javascript"
+        src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,1 @@
+web gunicorn FarmerBora_Project.wsgi:application --log-file -

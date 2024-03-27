@@ -1,0 +1,154 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="x-icon" href="{% static 'images/logo.png' %}">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title class="brand notranslate">
+        FarmerBora LH
+    </title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+        integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Ephesis&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Vina+Sans&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+
+    <header class="header">
+
+        <section class="flex">
+            <div class="translate" id="google_translate_element"></div>
+            <a href="home.html" class="logo notranslate">FarmerBora - LH</a>
+
+
+            <div class="icons">
+                <div id="menu-btn" class="fas fa-bars"></div>
+                <div id="search-btn" class="fas fa-search"></div>
+                <div id="user-btn" class="fas fa-user"></div>
+                <div id="toggle-btn" class="fas fa-sun"></div>
+            </div>
+
+            <div class="profile">
+                <img src="{%static 'images/pic-1.jpg'%}" class="image" alt="">
+                <h3 class="name notranslate">{{user.first_name}} {{user.last_name}}</h3>
+                <p class="role">Farmer</p>
+                <a href="{% url 'profile' %}" class="btn">view profile</a>
+                <a href="{% url 'logout' %}" class="btn">Logout</a>
+                <div class="flex-btn">
+                </div>
+            </div>
+
+        </section>
+
+    </header>
+
+    <div class="side-bar">
+
+        <div id="close-btn">
+            <i class="fas fa-times"></i>
+        </div>
+
+        <div class="profile">
+            <img src="{% static 'images/pic-1.jpg' %}" class="image" alt="">
+            <h3 class="name notranslate">{{user.first_name}} {{user.last_name}}</h3>
+            <p class="role">Farmer</p>
+            <a href="{% url 'profile' %}" class="btn">view profile</a>
+        </div>
+
+        <nav class="navbar">
+            <a href="{% url 'index' %}"><span>Home</span></a>
+            <a href="{% url 'diseases' %}"><span>Diseases</span></a>
+            <a href="{% url 'forum' %}"><span>PostForum</span></a>
+            <a href="{% url 'contact' %}"><span>contact us</span></a>
+
+
+        </nav>
+
+    </div>
+
+
+    <section class="diseases">
+
+
+        <h1 class="heading">Livestock Diseases</h1>
+
+        <div class="box-container">
+
+            <div class="box-image">
+                <p class="text notranslate">Health is Wealth</p>
+            </div>
+
+
+        </div>
+        <div class="aboutus">
+            <div class="pot">
+                <div class="writing">
+                    <div class="Tittle">
+                        <h1 class="Title ">About Us</h1>
+                    </div>
+                    <div class="workload">
+                        <h3>Lorem ipsum dolor sit amet.</h3>
+                        <p class="text notranslate">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio
+                            sapiente
+                            deleniti rerum, sit debitis pariatur inventore esse! Sit, accusantium? Cupiditate iusto
+                            velit
+                            odit
+                            magnam facilis iste recusandae tenetur sit omnis ipsa necessitatibus aut, aliquam doloremque
+                            vitae
+                            similique voluptatum? Nam aspernatur minus consequuntur magnam. Placeat reprehenderit
+                            deserunt
+                            expedita ut perspiciatis doloribus?</p>
+                        <div class="buttonn">
+                            <a href="contact.html" class="btn">Read More...</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-section"><img
+                        src="https://source.unsplash.com/1600x900/?livestock,diseases,Veterinary Doctors" alt="">
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+
+
+    <script src="{% static 'script.js' %}"></script>
+
+
+    <footer class="footer">
+
+        &copy; copyright @ 2024 by <span>FarmerBora - LH</span> | all rights reserved!
+
+    </footer>
+
+    <!-- custom js file link  -->
+    <script src="{%static 'script.js'%}"></script>
+    <script type="text/javascript" src="{%static 'lang.js'%}"></script>
+
+    <script type="text/javascript"
+        src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
+
+</html>
