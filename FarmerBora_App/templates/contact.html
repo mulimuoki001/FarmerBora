@@ -50,13 +50,12 @@
             </div>
 
             <div class="profile">
-                <img src="{%static 'images/pic-1.jpg'%}" class="image" alt="">
+                <img src="{{user.profile_picture.url}}" class="image" alt="">
+                <h3 class="name notranslate">{{user.username}} </h3>
                 <h3 class="name notranslate">{{user.first_name}} {{user.last_name}}</h3>
-                <p class="role">Farmer</p>
-                <a href="{% url 'profile' %}" class="btn">view profile</a>
+                <p class="role notranslate">{{user.role}}</p>
                 <a href="{% url 'logout' %}" class="btn">Logout</a>
-                <div class="flex-btn">
-                </div>
+            </div>
             </div>
 
         </section>
@@ -70,10 +69,11 @@
         </div>
 
         <div class="profile">
-            <img src="{% static 'images/pic-1.jpg' %}" class="image" alt="">
+            <img src="{{user.profile_picture.url}}" class="image" alt="">
+            <h3 class="name notranslate">{{user.username}} </h3>
             <h3 class="name notranslate">{{user.first_name}} {{user.last_name}}</h3>
-            <p class="role">Farmer</p>
-            <a href="{% url 'profile' %}" class="btn">view profile</a>
+            <p class="role notranslate">{{user.role}}</p>
+            <a href="{% url 'logout' %}" class="btn">Logout</a>
         </div>
 
         <nav class="navbar">
@@ -159,7 +159,7 @@
     <!-- custom js file link  -->
     <script src="{%static 'script.js'%}"></script>
     <script type="text/javascript" src="{%static 'lang.js'%}"></script>
-
+    <script type="text/javascript" src="{%static 'forum.js'%}"></script>
     <script type="text/javascript"
         src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>

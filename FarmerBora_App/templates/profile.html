@@ -4,7 +4,11 @@
 
 {% block content %}
 <div class="container">
-    <h2>{{user.username}}</h2>
-    <h2>{{user.email}}</h2>
+    <img src="{{user.profile_picture.url}}" alt="">
+    <h1 class="notranslate">{{user.first_name}} {{user.last_name}}</h1>
+    <h2 class="notranslate">{{user.username}}</h2>
+    <h2 class="notranslate">{{user.email}}</h2>
+    <h2 class="notranslate">{{user.role}}</h2>
 </div>
+
 {% endblock %}

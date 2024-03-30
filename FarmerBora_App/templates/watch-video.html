@@ -38,10 +38,11 @@
          </div>
 
          <div class="profile">
-            <img src="{%static 'images/pic-1.jpg'%}" class="image" alt="">
+            <img src="{{user.profile_picture.url}}" class="image" alt="">
+            <h3 class="name notranslate">{{user.username}} </h3>
             <h3 class="name notranslate">{{user.first_name}} {{user.last_name}}</h3>
-            <p class="role">Farmer</p>
-            <a href="{% url 'profile' %}" class="btn">view profile</a>
+            <p class="role notranslate">{{user.role}}</p>
+
             <a href="{% url 'logout' %}" class="btn">Logout</a>
          </div>
 
@@ -56,10 +57,11 @@
       </div>
 
       <div class="profile">
-         <img src="{%static 'images/pic-1.jpg'%}" class="image" alt="">
+         <img src="{{user.profile_picture.url}}" class="image" alt="">
+         <h3 class="notranslate name">{{user.username}} </h3>
          <h3 class="name notranslate">{{user.first_name}} {{user.last_name}}</h3>
-         <p class="role">Farmer</p>
-         <a href="{% url 'profile' %}" class="btn">view profile</a>
+         <p class="role notranslate">{{user.role}}</p>
+
          <a href="{% url 'logout' %}" class="btn">Logout</a>
       </div>
 

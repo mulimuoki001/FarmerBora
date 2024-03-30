@@ -1303,3 +1303,123 @@ section{
  }
  
  
+
+
+ 
+/* Forum.html */
+.container{
+   margin: 20px;
+   padding: 20px;
+}
+
+.subforum{
+   margin-top: 20px;
+
+}
+.subforum-link{
+   color: rgb(155, 4, 4);
+   font-weight: bolder;
+   text-decoration: none;
+}
+.subforum-header{
+   background-color: #575858;
+   padding: 5px;
+   border-radius: 5px;
+   margin: 4px;
+}
+.subforum-description *{
+   margin-block: 0;
+}
+.subforum-row{
+   display: grid;
+   grid-template-columns: 7% 60% 13% 20%;
+
+}
+
+.subforum-column{
+   padding: 10px;
+   margin: 4px;
+   border-radius: 5px;
+   background-color: #252a2c;
+}
+.center{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.subforum-icon i{
+   font-size: 45px;
+}
+
+.subforum-line{
+   display: block;
+   border: 0;
+   height: 2px;
+   background-image: linear-gradient(to right, rgba(190,190,190, 0), rgba(12, 12, 12, 0.75), rgba(190,190, 190, 0));
+
+}
+@media screen and (max-width: 800px){
+   .subforum-icon i{
+       font-size: 25px;
+   }
+   
+}
+@media screen and (min-width: 270px) and (max-width: 310px){
+   .subforum-stats{
+       font-size: 10px;
+   }
+}
+@media screen and (min-width: 210px) and (max-width: 250px){
+   .subforum-stats{
+       font-size: 8px;
+   }
+}
+@media screen and (min-width: 145px) and (max-width: 200px){
+   .subforum-stats{
+       font-size: 4px;
+   }
+}
+@media screen and (max-width: 560px){
+   .container{
+       margin: 10px;
+       padding: 10px;
+   }
+   .subforum-row{
+       display: grid;
+       grid-template-columns: 25% 75%;
+       grid-template-rows: 65% 35%;
+   }
+   .subforum-icon{
+       font-size: 30px;
+   }
+}
+@media screen and (max-width: 285px){
+   .container{
+       margin: 7px;
+       padding: 7px;
+   }
+   
+   html{
+       font-size: 10px;
+   };
+}
+@media screen and (max-width: 220px){
+   html{
+       font-size: 7px;   
+   };
+   .subforum-stats{
+       font-size: 10px;
+   }
+   
+}
+@media screen and (min-width: 145px) and (max-width: 180px){
+   .container{
+       margin: 5px;
+       padding: 5px;
+   }
+   
+   html{
+       font-size: 5px;
+   };
+}
