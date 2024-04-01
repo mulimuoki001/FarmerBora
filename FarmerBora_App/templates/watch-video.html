@@ -1,4 +1,9 @@
 {% load static %}
+{%url 'index' as index%}
+{%url 'diseases' as diseases%}
+{%url 'forum' as forum%}
+{%url 'contact' as contact%}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -66,12 +71,16 @@
       </div>
 
       <nav class="navbar">
-         <a href="{% url 'index' %}"><span>Home</span></a>
-         <a href="{% url 'diseases' %}"><span>Diseases</span></a>
-         <a href="{% url 'forum' %}"><span>PostForum</span></a>
-         <a href="{% url 'contact' %}"><span>contact us</span></a>
+         <nav class="navbar">
+            <a href="{% url 'index' %}" class="{% if request.path == index %}active{% endif %}"><span>Home</span></a>
+            <a href="{% url 'diseases' %}"
+               class="{% if request.path == diseases %}active{% endif %}"><span>Diseases</span></a>
+            <a href="{% url 'forum' %}"
+               class="{% if request.path == forum %}active{% endif %}"><span>PostForum</span></a>
+            <a href="{% url 'contact' %}" class="{% if request.path == contact %}active{% endif %}"><span>contact
+                  us</span></a>
 
-      </nav>
+         </nav>
 
    </div>
 

@@ -299,9 +299,11 @@ section{
 }
 
 .side-bar #close-btn i:hover{
-   background-color: var(--black);
+   background-color: rgb(83, 30, 30);
 }
-
+.side-bar #close-btn i:active{
+   background-color: rgb(83, 30, 30);
+}
 .side-bar .profile{
    padding:3rem 2rem;
    text-align: center;

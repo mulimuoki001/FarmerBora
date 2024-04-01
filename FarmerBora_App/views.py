@@ -46,27 +46,27 @@ def custom_logout(request):
 
 
 def index(request):
-    return render(request, "index.html")
+    return render(request, "index.html", {"request": request})
 
 
 def diseases(request):
-    return render(request, "diseases.html")
+    return render(request, "diseases.html", {"request": request})
 
 
 def forum(request):
-    return render(request, "forum.html")
+    return render(request, "forum.html", {"request": request})
 
 
 def contact(request):
-    return render(request, "contact.html")
+    return render(request, "contact.html", {"request": request})
 
 
 def playlist(request):
-    return render(request, "playlist.html")
+    return render(request, "playlist.html", {"request": request})
 
 
 def watchvideo(request):
-    return render(request, "watch-video.html")
+    return render(request, "watch-video.html", {"request": request})
 
 
 def details(request):

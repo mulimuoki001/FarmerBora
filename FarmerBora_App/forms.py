@@ -34,9 +34,7 @@ class UserRegistrationForm(UserCreationForm):
         if profile_picture:
             img = Image.open(profile_picture)
             output = BytesIO()
-            img = img.resize(
-                (50, 80)
-            )  # Replace desired_width and desired_height with the desired dimensions
+            img = img.resize((50, 50))
             img.save(output, format="JPEG", quality=100)
             output.seek(0)
             profile_picture = InMemoryUploadedFile(
