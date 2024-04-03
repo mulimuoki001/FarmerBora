@@ -332,7 +332,7 @@ section{
 
 .side-bar .navbar a{
    display: block;
-   padding: 2rem;
+   padding: 1rem;
    font-size: 2rem;
 }
 
@@ -436,6 +436,7 @@ section{
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
+  margin-top: 50px;
 }
 .pot{
    display: block;
@@ -1111,14 +1112,14 @@ section{
 .footer{
    background-color: var(--white);
    border-top: var(--border);
-   position: sticky;
+   position: relative;
    bottom: 0; left: 0; right: 0;
    text-align: center;
    font-size: 2rem;
    padding:2.5rem 2rem;
    color:var(--black);
    margin-top: 1rem;
-   z-index: 1000;
+   z-index: -1;
    /* padding-bottom: 9.5rem; */
 }
 

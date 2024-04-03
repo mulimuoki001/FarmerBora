@@ -18,7 +18,7 @@
 html{
     font-size: 14px;
     font-family: "Oswald", sans-serif;
-    background-color: rgb(180, 175, 175);
+    background-color: rgb(3, 3, 3);
     color: white;
 };
 
@@ -39,7 +39,7 @@ h1{
 
 }
 .subforum-link{
-    color: rgb(155, 4, 4);
+    color: rgb(235, 165, 165);
     font-weight: bolder;
     text-decoration: none;
 }
@@ -157,7 +157,7 @@ header{
 .navigation{
     background-color: rgb(54, 50, 50);
     padding: 10px;
-    width: 65%;
+    width: 30%;
     display: inline-block;
     border-radius: 5px;
     margin-right: 10px;
@@ -371,7 +371,7 @@ header{
     padding: 40px;
     display: flex;
     justify-content: center;
-    box-shadow: 3px 4px 5px #585658;
+    box-shadow: 5px 4px 4px 5px #290929;
  }
  .search-box select{
     padding: 10px;
@@ -624,10 +624,10 @@ header{
     border: none;
     padding: 10px;
     font-weight: bolder;
-    box-shadow: 4px 6px 8px #080808;
+    box-shadow: 4px 6px white;
     cursor: pointer;
     float: right;
-    border-radius: 5px;
+    
 }
 .body .comment .button:hover{
     background-color: #0c0c0c;

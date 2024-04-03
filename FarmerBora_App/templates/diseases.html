@@ -25,12 +25,9 @@
 
       <section class="flex">
          <div class="translate" id="google_translate_element"></div>
-         <a href="{% url 'index' %}" class="logo">FarmerBora</a>
+         <a href="{% url 'index' %}" class="logo notranslate">FarmerBora</a>
 
-         <form action="search.html" method="post" class="search-form">
-            <input type="text" name="search_box" required placeholder="search diseases..." maxlength="100">
-            <button type="submit" class="fas fa-search"></button>
-         </form>
+
 
          <div class="icons">
             <div id="menu-btn" class="fas fa-bars"></div>
@@ -60,7 +57,7 @@
       </div>
 
       <div class="profile">
-         <img src="{%static 'images/pic-1.jpg'%}" class="image" alt="">
+         <img src="{{user.profile_picture.url}}" class="image" alt="">
 
          <h3 class="name notranslate">{{user.username}} </h3>
          <h3 class="name notranslate">{{user.first_name}} {{user.last_name}}</h3>
@@ -71,12 +68,10 @@
 
       <nav class="navbar">
          <nav class="navbar">
-            <a href="{% url 'index' %}" class="{% if request.path == index %}active{% endif %}"><span>Home</span></a>
-            <a href="{% url 'diseases' %}"
-               class="{% if request.path == diseases %}active{% endif %}"><span>Diseases</span></a>
-            <a href="{% url 'forum' %}"
-               class="{% if request.path == forum %}active{% endif %}"><span>PostForum</span></a>
-            <a href="{% url 'contact' %}" class="{% if request.path == contact %}active{% endif %}"><span>contact
+            <a href="{% url 'index' %}"><span>Home</span></a>
+            <a href="{% url 'diseases' %}"><span>Diseases</span></a>
+            <a href="{% url 'forum' %}"><span>PostForum</span></a>
+            <a href="{% url 'contact' %}"><span>contact
                   us</span></a>
 
          </nav>
@@ -399,6 +394,8 @@
    <!-- custom js file link  -->
    <script src="{%static 'script.js'%}"></script>
    <script type="text/javascript" src="{%static 'lang.js'%}"></script>
+   <script src="{% static 'activepage.js' %}"></script>
+
 
    <script type="text/javascript"
       src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>

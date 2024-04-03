@@ -83,6 +83,44 @@
     <script type="text/javascript"
         src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
+    <script src="https://js.pusher.com/8.2.0/pusher.min.js"></script>
+    <script>
+
+        // Enable pusher logging - don't include this in production
+        Pusher.logToConsole = true;
+
+        var pusher = new Pusher('9d32762940885a51de2a', {
+            cluster: 'ap1'
+        });
+
+        var channel = pusher.subscribe('my-channel');
+        channel.bind('my-event', function (data) {
+            alert(JSON.stringify(data));
+        });
+        channel.bind('pusher:subscription_succeeded', function (data) {
+            console.log('Subscription to channel successful:', data);
+            let alertShown = false;
+            fetch('/latest_post_data/')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Failed to fetch latest post data');
+                    }
+                    return response.json();
+                })
+                .then(postData => {
+                    if (!alertShown) {
+                        var alertMessage = ` Hello ${postData.current_user_name} view the  Latest Post: ${postData.title} by ${postData.user}, , visit the PostForum`;
+                        alert(alertMessage);
+                        alertShown = true;
+
+                    }
+
+                })
+                .catch(error => console.error('Error fetching latest post data:', error));
+            // Add any additional actions here
+        })
+    </script>
+
     <!-- Option 2: Separate Popper and Bootstrap JS -->
     <!--
       <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>

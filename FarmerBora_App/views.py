@@ -1,12 +1,16 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib import messages
-from FarmerBora_App.forms import UserRegistrationForm
+from FarmerBora_App.forms import UserRegistrationForm, PostForm, UpdateForm
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import logout
 from django.http import HttpResponseRedirect
 from django.urls import reverse
-import logging
+from .models import Post, Category, Author, CustomUser
+from .utils import update_views
+import pusher
+from django.conf import settings
+from django.http import JsonResponse
 
 
 def home(request):
@@ -54,7 +58,9 @@ def diseases(request):
 
 
 def forum(request):
-    return render(request, "forum.html", {"request": request})
+    forums = Category.objects.all()
+    context = {"forums": forums}
+    return render(request, "forum.html", context)
 
 
 def contact(request):
@@ -69,9 +75,80 @@ def watchvideo(request):
     return render(request, "watch-video.html", {"request": request})
 
 
-def details(request):
-    return render(request, "details.html")
+def details(request, slug):
+    post = get_object_or_404(Post, slug=slug)
+    context = {
+        "post": post,
+    }
+    update_views(request, post)
+    return render(request, "details.html", context)
 
 
-def posts(request):
-    return render(request, "posts.html")
+def posts(request, slug):
+    category = get_object_or_404(Category, slug=slug)
+    posts = Post.objects.filter(approved=True, categories=category)
+    context = {
+        "posts": posts,
+        "forum": category,
+    }
+    return render(request, "posts.html", context)
+
+
+@login_required
+def update_profile(request):
+    context = {}
+    user = request.user
+
+    if Author.objects.filter(user=user).exists():
+        messages.warning(request, "You are already an author.")
+        return redirect("forum")  # Redirect to the forum if already an author
+
+    form = UpdateForm(request.POST, request.FILES)
+    if request.method == "POST":
+        if form.is_valid():
+            update_profile = form.save(commit=False)
+            update_profile.user = user
+            update_profile.save()
+            return redirect("forum")
+    context.update({"form": form, "title": "Update Profile"})
+    return render(request, "update_profile.html", context)
+
+
+@login_required
+def create_post(request):
+    context = {}
+    form = PostForm(request.POST)
+    if request.method == "POST":
+        if form.is_valid():
+            author = Author.objects.get(user=request.user)
+            new_post = form.save(commit=False)
+            new_post.user = author
+            new_post.save()
+            pusher_client = pusher.Pusher(
+                app_id=settings.PUSHER_APP_ID,
+                key=settings.PUSHER_KEY,
+                secret=settings.PUSHER_SECRET,
+                cluster=settings.PUSHER_CLUSTER,
+            )
+            pusher_client.trigger(
+                "my-channel", "new-post", {"message": "A new post has been created!"}
+            )
+
+            return redirect("forum")
+    context.update({"form": form, "title": "Create New  Post"})
+
+    return render(request, "create_post.html", context)
+
+
+def latest_post_data(request):
+    try:
+        current_user = request.user
+        latest_post = Post.objects.latest("date")
+        post_data = {
+            "title": latest_post.title,
+            "user": latest_post.user.fullname,
+            "current_user_name": current_user.username,
+        }
+        return JsonResponse(post_data)
+    except Exception as e:
+        return JsonResponse({"error": str(e)}, status=500)

@@ -55,7 +55,6 @@ document.querySelector('#close-btn').onclick = () => {
 
 window.onscroll = () => {
    profile.classList.remove('active');
-   search.classList.remove('active');
 
    if (window.innerWidth < 1200) {
       sideBar.classList.remove('active');

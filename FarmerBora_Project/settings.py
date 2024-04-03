@@ -43,6 +43,9 @@ INSTALLED_APPS = [
     # own
     "FarmerBora_App.apps.FarmerboraAppConfig",
     "crispy_forms",
+    "tinymce",
+    "hitcount",
+    "taggit",
 ]
 
 MIDDLEWARE = [
@@ -137,3 +140,10 @@ LOGIN_URL = "login"
 
 django_heroku.settings(locals())
 AUTH_USER_MODEL = "FarmerBora_App.CustomUser"
+
+
+# settings.py
+PUSHER_APP_ID = "1781944"
+PUSHER_KEY = "9d32762940885a51de2a"
+PUSHER_SECRET = "15a453abbcc34d155110"
+PUSHER_CLUSTER = "ap1"

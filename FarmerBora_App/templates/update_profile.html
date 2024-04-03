@@ -1,0 +1,12 @@
+{% extends 'baseforum.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+<h1 style="text-align:center; margin-block: 30px; color : rgb(223, 216, 216)" class="notranslate">Heyy {{user}}, Become
+    an author</h1>
+<form method="POST" action="." enctype="multipart/form-data" style="margin-left:150px;">
+    {% csrf_token %}
+    {{ form|crispy }}
+    <input type="submit" value="Save" style="margin-block: 50px">
+</form>
+{% endblock %}

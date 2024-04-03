@@ -5,6 +5,7 @@ from PIL import Image
 from io import BytesIO
 from django.core.files.uploadedfile import InMemoryUploadedFile
 import sys
+from .models import Post, Author
 
 
 class UserRegistrationForm(UserCreationForm):
@@ -48,3 +49,25 @@ class UserRegistrationForm(UserCreationForm):
             return profile_picture
         else:
             return profile_picture
+
+
+class UpdateForm(forms.ModelForm):
+    class Meta:
+        model = Author
+        fields = [
+            "fullname",
+            "bio",
+            "profile_pic",
+        ]
+
+
+class PostForm(forms.ModelForm):
+    class Meta:
+        model = Post
+        fields = [
+            "title",
+            "content",
+            "categories",
+            "tags",
+            "approved",
+        ]

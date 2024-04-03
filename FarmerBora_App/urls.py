@@ -1,6 +1,7 @@
 from django.urls import path
 from . import views
 from django.contrib.auth import views as auth_views
+from .views import create_post, update_profile, latest_post_data
 
 urlpatterns = [
     path("", views.home, name="home"),
@@ -16,6 +17,9 @@ urlpatterns = [
     path("contact/", views.contact, name="contact"),
     path("playlist", views.playlist, name="playlist"),
     path("watch-video", views.watchvideo, name="watch-video"),
-    path("posts/", views.posts, name="posts"),
-    path("details/", views.details, name="details"),
+    path("posts/<slug>/", views.posts, name="posts"),
+    path("details/<slug>/", views.details, name="details"),
+    path("create_post/", create_post, name="create_post"),
+    path("update_profile/", update_profile, name="update_profile"),
+    path("latest_post_data/", latest_post_data, name="latest_post_data"),
 ]
