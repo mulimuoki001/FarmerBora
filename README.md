@@ -1,15 +1,15 @@
 # FarmerBora
 Welcome to FarmerBora Project. For this project project i used the Django Web Framework.To run this project using any terminal follow the following steps:
-1. The first step is to create a Virtual Environment(Am assuminmg you are using version 3 of python)
-        python3 -m venv <name of your virtual environment> for instance
-        python3 -m venv env       The name of my virtual encironment is env
+1. The first step is to create a Virtual Environment(Am assuminmg you are using version 3 of python) .The name of my virtual encironment is env
+        python3 -m venv <name of your virtual environment> 
+        python3 -m venv env      
    ![Screenshot (231)](https://github.com/mulimuoki001/FarmerBora/assets/116681226/0a6b6b1a-fa2c-4ec5-8c35-b57a8b575751)
    
 3. Activate the virtual environment
-        . On Windows
+           On Windows
         	env\Scripts\activate
 
-        .On MacOS nad Linux(for those who will choose to use the Ubuntu terminal)
+           On MacOS nad Linux(for those who will choose to use the Ubuntu terminal)
         	source env/bin/activate
     ![Screenshot (232)](https://github.com/mulimuoki001/FarmerBora/assets/116681226/bef83d93-24bf-4f45-b51d-f0765fd7598e)
 
