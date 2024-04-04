@@ -1,6 +1,7 @@
 {% extends 'baseforum.html' %}
 {% load hitcount_tags %}
 {% block content %}
+{% load static %}
 <div class="container">
     <!------------Navigation--------------->
     <div class="navigate">
@@ -17,9 +18,9 @@
             <div class="authors">
                 <div class="username notranslate"><a href="#" class="subforum-link">{{post.user.fullname}}</a></div>
                 <div>{{user.role}}</div>
-                <img style="border-radius: 80px;" src="{{post.user.profile_pic.url}}" alt="">
-                <div>Posts: <u>{{comment.user.num_posts}}</u></div>
-                <div>Points: <u>{{comment.user.points}}</u></div>
+                <img style="border-radius: 120px;" src="{{post.user.profile_pic.url}}" alt="">
+                <div>Posts: <u>{{Comment.user.num_posts}}</u></div>
+                <div>Points: <u>{{Comment.user.points}}</u></div>
             </div>
             <div class="content">
                 {{post.content|safe}}
@@ -32,63 +33,72 @@
     </div>
     <!-------------Comment Input---------------------->
     <div class="comment-area hide" id="comment-area">
-        <textarea class="text-area" name="" id="" cols="30" rows="10" placeholder="comment here ..."></textarea>
+        <textarea script="width: 100%;" class="textarea" name="" id="" cols="30" rows="10"
+            placeholder="comment here ..."></textarea>
         <input type="submit" name="" id="" value="submit">
     </div>
 
 
     <!-------------------Show Comment--------------------->
-    {% for comment in post.comments.all %}
+
     <div class="comments-container">
         <div class="head">
-            <div class="authors">Author</div>
-            <div class="content">Comments</div>
+            <div class="authors">{{ comment.user.fullname|title }}</div>
+            <div class="content">{{ comment.content }}</div>
         </div>
         <div class="body">
             <div class="authors">
-                <div class="AnotherUser"><a href="#" class="subforum-link">{{comment.user.fullname|title}}</a></div>
+                <div class="AnotherUser"><a href="#" class="subforum-link">{{ comment.user.fullname|title }}</a></div>
                 <div>Role</div>
-                <img src="{{comment.user.profile_pic.url}}" alt="">
-                <div>Posts: <u>{{comment.user.num_posts}}</u></div>
-                <div>Points: <u>{{comment.user.points}}</u></div>
+                <img src="{{ comment.user.profile_pic.url }}" alt="">
+                <div>Posts: <u>{{ comment.user.num_posts }}</u></div>
+                <div>Points: <u>{{ comment.user.points }}</u></div>
             </div>
             <div class="content">
-                {{comment.content}}
+                {{ comment.content }}
                 <div class="comment">
                     <button onclick="showReply()" class="button">Reply</button>
                 </div>
             </div>
         </div>
     </div>
-    <!-------------Reply Input---------------------->
+    <!-- Reply Input -->
     <div class="comment-area hide" id="reply-area">
-        <textarea class="text-area" name="" id="" cols="30" rows="10" placeholder="reply here ..."></textarea>
-        <input type="submit" name="" id="" value="submit">
+        <textarea script="width: 100%;" class="textarea" name="" id="" cols="30" rows="10"
+            placeholder="Reply here ..."></textarea>
+        <input type="submit" name="" id="" value="Submit">
     </div>
+    <!-- Show Reply -->
 
-    <!-------------------Show Reply--------------------->
-    {% for reply in comment.replies.all %}
     <div class="comments-container" style="width:95%; margin-left: 5%">
         <div class="head">
-            <div class="authors">Author</div>
-            <div class="content">Comments</div>
+            <div class="authors">{{ reply.user.fullname|title }}</div>
+            <div class="content">{{ reply.content }}</div>
         </div>
         <div class="body">
             <div class="authors">
-                <div class="AnotherUser"><a href="#" class="subforum-link">{{reply.user.fullname|title}}</a></div>
+                <div class="AnotherUser"><a href="#" class="subforum-link">{{ reply.user.fullname|title }}</a></div>
                 <div>Role</div>
-                <img src="{{reply.user.profile_pic.url}}" alt="">
-                <div>Posts: <u>{{reply.user.num_posts}}</u></div>
-                <div>Points: <u>{{reply.user.points}}</u></div>
+                <img src="{{ reply.user.profile_pic.url }}" alt="">
+                <div>Posts: <u>{{ reply.user.num_posts }}</u></div>
+                <div>Points: <u>{{ reply.user.points }}</u></div>
             </div>
             <div class="content">
-                {{reply.content}}
-
+                {{ reply.content }}
             </div>
         </div>
     </div>
-    {% endfor %}
-    {% endfor %}
+
 
 </div>
+<script>
+    function showComment() {
+        var commentArea = document.getElementById("comment-area");
+        commentArea.classList.remove("hide");
+    }
+    function showReply() {
+        var replyArea = document.getElementById("reply-area");
+        replyArea.classList.remove("hide");
+    }
+</script>
 {% endblock %}

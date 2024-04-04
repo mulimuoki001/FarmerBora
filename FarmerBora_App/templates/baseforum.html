@@ -40,15 +40,16 @@
                 </ul>
             </nav>
             <a href="#" class="bar-icon" id="iconBar" onclick="hideIconBar()"><i class=" fas fa-bars"></i></a>
-            <div class="brand notranslate">FarmerBora - LH</div>
-            <div class="translate" id="google_translate_element"></div>
+
             {% if user.is_authenticated %}
             <div id="form-and-forum-container"
-                style="font-size:50px;font-weight:300px;color:rgb(66, 6, 6);margin-left:100px;text-decoration:none;">
+                style="font-size:50px;font-weight:300px;color:rgb(66, 6, 6);margin-left:50px;text-decoration:none;margin-right:50px;">
                 <a href="{% url 'create_post' %}" class="subforum-link sub-link">+</a>
             </div>
 
             {% endif %}
+            <div class="translate" id="google_translate_element"></div>
+
         </div>
         <div class="search-box">
             <div class="select1">

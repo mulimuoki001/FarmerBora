@@ -244,11 +244,11 @@ header{
         font-size: 15px;
     }
     .brand{
-        font-size: 50px;
+        font-size: 25px;
     }
    
 }
-@media screen and (min-width: 430px) and (max-width: 500px){
+@media screen and (min-width: 430px) and (max-width: 499px){
     .navigation{
         padding: 1px;
         width: 65%;
@@ -265,9 +265,8 @@ header{
         font-size: 15px;
     }
     .brand{
-        font-size: 40px;
+       display: none;
     }
-   
 }
 @media screen and (min-width: 360px) and (max-width: 430px){
     .navigation{
@@ -285,11 +284,12 @@ header{
     .close-icon i{
         font-size: 15px;
     }
-    .brand{
-        font-size: 30px;
-    }
+    
     .bar-icon i{
         font-size: 30px;
+    }
+    .brand{
+       display: none;
     }
 }
 @media screen and (min-width: 325px) and (max-width: 360px){
@@ -308,11 +308,12 @@ header{
     .close-icon i{
         font-size: 15px;
     }
-    .brand{
-        font-size: 25px;
-    }
+    
     .bar-icon i{
         font-size: 20px;
+    }
+    .brand{
+       display: none;
     }
 }
 @media screen and (min-width: 200px) and (max-width: 325px){
@@ -333,13 +334,13 @@ header{
     .close-icon i{
         font-size: 15px;
     }
-    .brand{
-        font-size: 20px;
-        display: flex;
-    }
+    
     
     .bar-icon i{
         font-size: 15px;
+    }
+    .brand{
+       display: none;
     }
 }
 @media screen and (min-width: 145px) and (max-width: 200px){
@@ -355,12 +356,12 @@ header{
     .close-icon i{
         font-size: 10px;
     }
-    .brand{
-        font-size: 10px;
-        display: flex;
-    }
+    
     .bar-icon i{
         font-size: 15px;
+    }
+    .brand{
+       display: none;
     }
 }
  /*Search Box*/
@@ -392,20 +393,22 @@ header{
 
 @media screen and (max-width: 460px){
     .search-box input, .search-box button, .search-box select{
-       min-width: 300px;
-       margin-top: 5px;
-    }  
-    .search-box{ display: block;}
-}
-@media screen and (min-width:345px ) and  (max-width: 400px){
-    .search-box input, .search-box button, .search-box select{
-       max-width: 100px;
+       max-width: 200px;
        margin-top: 5px;
        margin-left: -35px;
     }  
+    .search-box{ display: block;
+        width: 300px;}
+}
+@media screen and (min-width:345px ) and  (max-width: 400px){
+    .search-box input, .search-box button, .search-box select{
+       
+        max-width: 200px;
+       margin-top: 5px;
+    }  
     .search-box{ 
         display: block;
-        width: 600px;
+        width: 300px;
     }
 }
 @media screen and  (max-width: 345px){
@@ -645,7 +648,7 @@ header{
     width: 100%;
     min-height: 100px;
 }
-.comment-area .text-area{
+.comment-area .textarea{
     width: 100%;
     min-height: 100px;
     padding: 10px;
