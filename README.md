@@ -38,10 +38,10 @@ Welcome to FarmerBora Project. For this project project i used the Django Web Fr
 
         python 3manage.py createsuperuser
 
-   ![Screenshot (238)](https://github.com/mulimuoki001/FarmerBora/assets/116681226/948219fb-06b8-4b86-80c4-0872086b9e27)
-
+  ![Screenshot (240)](https://github.com/mulimuoki001/FarmerBora/assets/116681226/7dd0d6aa-0929-4bea-a488-7486d081f684)
 6. Run the Development server
    
         python3 manage.py runserver
-   ![Screenshot (239)](https://github.com/mulimuoki001/FarmerBora/assets/116681226/6828fc70-b6b6-41e6-abd6-5cb85b4e61d1)
+  ![Screenshot (241)](https://github.com/mulimuoki001/FarmerBora/assets/116681226/62564062-0f0e-48bc-a975-c0629cc0e20f)
+
 To access the Application Open the browser and go to  http://127.0.0.1:8000 to see the running Django Application
