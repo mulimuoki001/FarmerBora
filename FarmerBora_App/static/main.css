@@ -242,7 +242,11 @@
   }
   
   
-  
+  @media screen and (max-width: 450px){
+    .d-flex{
+       font-size: 5px;
+    }
+  }
   
   
   

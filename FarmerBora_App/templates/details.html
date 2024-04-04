@@ -19,8 +19,8 @@
                 <div class="username notranslate"><a href="#" class="subforum-link">{{post.user.fullname}}</a></div>
                 <div>{{user.role}}</div>
                 <img style="border-radius: 120px;" src="{{post.user.profile_pic.url}}" alt="">
-                <div>Posts: <u>{{Comment.user.num_posts}}</u></div>
-                <div>Points: <u>{{Comment.user.points}}</u></div>
+                <div>Posts: <u>{{user.num_posts}}</u></div>
+                <div>Points: <u>{{user.points}}</u></div>
             </div>
             <div class="content">
                 {{post.content|safe}}
