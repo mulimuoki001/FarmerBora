@@ -170,6 +170,14 @@ section{
       opacity: 0;
    }
 }
+@media screen and (max-width: 680px){
+   .logo{
+      font-size: 10px;
+   }
+   .icons{
+      font-size: 1rem;
+   }
+}
 .header .flex .search-form{
    width: 50rem;
    border-radius: .5rem;
