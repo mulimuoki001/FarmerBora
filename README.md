@@ -9,22 +9,26 @@ Welcome to FarmerBora Project. For this project project i used the Django Web Fr
    
 2. Activate the virtual environment:
    
-           On Windows
+   On Windows
+   
         	env\Scripts\activate
 
-           On MacOS nad Linux(for those who will choose to use the Ubuntu terminal)
-        	source env/bin/activate
+   On MacOS nad Linux(for those who will choose to use the Ubuntu terminal)
+
+         source env/bin/activate
     ![Screenshot (232)](https://github.com/mulimuoki001/FarmerBora/assets/116681226/bef83d93-24bf-4f45-b51d-f0765fd7598e)
 
-3. Within the virtual environment clone my reposiotry
+4. Within the virtual environment clone my reposiotry
    
-        i. Ensure git is activated within the virtual environment
-   		 git init
-        ii. Now clone repository 
-                git clone https://github.com/mulimuoki001/FarmerBora.git
+   Ensure git is activated within the virtual environment
+
+         git init
+    Now clone repository 
+
+         git clone https://github.com/mulimuoki001/FarmerBora.git
         
    ![Screenshot (233)](https://github.com/mulimuoki001/FarmerBora/assets/116681226/55939bbd-4181-4284-ad1c-6b79ce160c31)
-4. Install all the Dependencies(Run the following commands to run all the necessary requirements for the app to run)
+6. Install all the Dependencies(Run the following commands to run all the necessary requirements for the app to run)
 
    
            pip install -r requirements.txt
