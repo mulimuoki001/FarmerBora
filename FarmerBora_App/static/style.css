@@ -490,9 +490,9 @@ section{
 }
 
 .writing .workload p{
-   color: rgb(4, 39, 156);
+   color:rgb(4, 201, 201);
    font-size: 20px;
-   font-weight: 200;
+   font-weight: 500;
   
    margin-top: 5px;
 }
