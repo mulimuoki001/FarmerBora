@@ -69,5 +69,4 @@ class PostForm(forms.ModelForm):
             "content",
             "categories",
             "tags",
-            "approved",
         ]

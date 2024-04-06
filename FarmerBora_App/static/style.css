@@ -476,21 +476,21 @@ section{
 }
 
 .writing .Tittle  h1{
-   color: rgb(133, 92, 92);
+   color: rgb(4, 39, 156);
    text-transform: uppercase;
    font-size: 45px;
    font-weight: 300;
 }
 
 .writing .workload h3{
-   color:rgb(24, 71, 71);
+   color:rgb(4, 201, 201);
    margin-top: 10px;
    font-size: 30px;
    font-weight: 200;
 }
 
 .writing .workload p{
-   color: rgb(17, 20, 8);
+   color: rgb(31, 9, 231);
    font-size: 20px;
    font-weight: 200;
   
@@ -1306,7 +1306,7 @@ section{
    }
    
    .writing .workload h3{
-      color:aqua;
+      
       margin-top: 10px;
       font-size:20px;
       font-weight: 200;
