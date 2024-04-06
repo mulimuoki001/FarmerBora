@@ -6,6 +6,7 @@ from io import BytesIO
 from django.core.files.uploadedfile import InMemoryUploadedFile
 import sys
 from .models import Post, Author
+import os
 
 
 class UserRegistrationForm(UserCreationForm):
@@ -30,25 +31,33 @@ class UserRegistrationForm(UserCreationForm):
             "password2",
         ]
 
-    def clean_profile_picture(self):
-        profile_picture = self.cleaned_data.get("profile_picture")
-        if profile_picture:
-            img = Image.open(profile_picture)
-            output = BytesIO()
-            img = img.resize((50, 50))
-            img.save(output, format="JPEG", quality=100)
-            output.seek(0)
-            profile_picture = InMemoryUploadedFile(
-                output,
-                "ImageField",
-                "%s.jpg" % profile_picture.name.split(".")[0],
-                "image/jpeg",
-                sys.getsizeof(output),
-                None,
-            )
-            return profile_picture
-        else:
-            return profile_picture
+    import os
+
+
+def clean_profile_picture(self):
+    profile_picture = self.cleaned_data.get("profile_picture")
+    if profile_picture:
+        img = Image.open(profile_picture)
+        output = BytesIO()
+        img = img.resize((50, 50))
+
+        # Extract the file extension
+        _, ext = os.path.splitext(profile_picture.name)
+
+        # Save the image with the extracted file extension
+        img.save(output, format=ext, quality=100)
+        output.seek(0)
+        profile_picture = InMemoryUploadedFile(
+            output,
+            "ImageField",
+            "%s%s" % (profile_picture.name.split(".")[0], ext),
+            "image/jpeg",
+            sys.getsizeof(output),
+            None,
+        )
+        return profile_picture
+    else:
+        return profile_picture
 
 
 class UpdateForm(forms.ModelForm):

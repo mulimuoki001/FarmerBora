@@ -25,6 +25,13 @@
     margin-top: 30px;
     margin-top: 30px;
   }
+  .profile .image{
+    height: 10rem;
+    width: 10rem;
+    border-radius: 50%;
+    object-fit: contain;
+    margin-bottom: 1rem;
+ }
   #header-paragraph{
     font-size: 20px;
     padding-top: 30px;
