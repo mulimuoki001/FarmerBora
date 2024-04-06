@@ -224,13 +224,26 @@ section{
    color:var(--white);
 }
 .box-image {
-   min-height: 70vh;
+   min-height: 50vh;
    width: 100%;
+   border-radius: 10px;
    background:
      url("https://source.unsplash.com/1600x900/?livestock diseases, Brucellosis, Veterinary Doctors, Rift Valley Fever");
    background-size: cover;
    background-position: center;
    position: relative;
+ }
+ @media screen and (max-width: 600px){
+   .box-image{
+      min-height: 35vh;
+      ;
+   }
+ }
+ @media screen and (max-width: 500px){
+   .box-image{
+      min-height: 25vh;
+      
+   }
  }
  .box-image .text{
    font-size: 30px;
