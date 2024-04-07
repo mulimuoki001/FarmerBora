@@ -40,7 +40,7 @@
 
 
     <!-------------------Show Comment--------------------->
-
+    {% for comment in post.comments.all %}
     <div class="comments-container">
         <div class="head">
             <div class="authors">{{ comment.user.fullname|title }}</div>
@@ -69,7 +69,7 @@
         <input onclick="hideReply()" type="submit" name="" id="" value="Submit">
     </div>
     <!-- Show Reply -->
-
+    {% for reply in comment.replies.all %}
     <div class="comments-container" style="width:95%; margin-left: 5%">
         <div class="head">
             <div class="authors">{{ reply.user.fullname|title }}</div>
@@ -89,6 +89,7 @@
         </div>
     </div>
 
+    {% endfor %}
 
 </div>
 <script>
