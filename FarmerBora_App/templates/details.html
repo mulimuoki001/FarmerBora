@@ -18,9 +18,9 @@
             <div class="authors">
                 <div class="username notranslate"><a href="#" class="subforum-link">{{post.user.fullname}}</a></div>
                 <div>{{user.role}}</div>
-                <img style="border-radius: 120px;" src="{{post.user.profile_pic.url}}" alt="">
-                <div>Posts: <u>{{comment.user.num_posts}}</u></div>
-                <div>Points: <u>{{comment.user.points}}</u></div>
+                <img style="border-radius: 50%;" src="{{post.user.profile_pic.url}}" alt="">
+                <div>Posts: <u>{{post.user.num_posts}}</u></div>
+                <div>Points: <u>{{post.user.points}}</u></div>
             </div>
             <div class="content">
                 {{post.content|safe}}
@@ -50,7 +50,7 @@
             <div class="authors">
                 <div class="AnotherUser"><a href="#" class="subforum-link">{{ comment.user.fullname|title }}</a></div>
                 <div>Role</div>
-                <img src="{{ comment.user.profile_pic.url }}" alt="">
+                <img style="border-radius: 50%;" src="{{ comment.user.profile_pic.url }}" alt="">
                 <div>Posts: <u>{{ comment.user.num_posts }}</u></div>
                 <div>Points: <u>{{ comment.user.points }}</u></div>
             </div>
@@ -79,7 +79,7 @@
             <div class="authors">
                 <div class="AnotherUser"><a href="#" class="subforum-link">{{ reply.user.fullname|title }}</a></div>
                 <div>Role</div>
-                <img src="{{ reply.user.profile_pic.url }}" alt="">
+                <img style="border-radius: 50%;" src="{{ reply.user.profile_pic.url }}" alt="">
                 <div>Posts: <u>{{ reply.user.num_posts }}</u></div>
                 <div>Points: <u>{{ reply.user.points }}</u></div>
             </div>

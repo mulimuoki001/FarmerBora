@@ -22,7 +22,7 @@ function showComment() {
 // function hideComment() {
 //     var commentArea = document.getElementById("comment-area");
 //     commentArea.classList.add("hide");
-}
+// }
 function showReply() {
     var replyArea = document.getElementById("reply-area");
     replyArea.classList.remove("hide");

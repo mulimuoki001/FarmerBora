@@ -47,6 +47,10 @@ class Author(models.Model):
     def __str__(self):
         return self.fullname
 
+    @property
+    def num_posts(self):
+        return Post.objects.filter(user=self).count()
+
     def save(self, *args, **kwargs):
         if not self.slug:
             self.slug = slugify(self.fullname)
@@ -71,10 +75,6 @@ class Category(models.Model):
 
     def get_url(self):
         return reverse("posts", kwargs={"slug": self.slug})
-
-    @property
-    def num_posts(self):
-        return Post.objects.filter(categories=self).count()
 
     @property
     def last_post(self):
@@ -110,7 +110,7 @@ class Post(models.Model):
     content = HTMLField()
     categories = models.ManyToManyField(Category)
     date = models.DateTimeField(auto_now_add=True)
-    approved = models.BooleanField(default=False)
+    approved = models.BooleanField(default=True)
     hit_count_generic = GenericRelation(
         HitCount,
         object_id_field="object_pk",
