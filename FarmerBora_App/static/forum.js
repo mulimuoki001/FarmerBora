@@ -19,16 +19,16 @@ function showComment() {
     commentArea.classList.remove("hide");
 
 }
-function hideComment() {
-    var commentArea = document.getElementById("comment-area");
-    commentArea.classList.add("hide");
+// function hideComment() {
+//     var commentArea = document.getElementById("comment-area");
+//     commentArea.classList.add("hide");
 }
 function showReply() {
     var replyArea = document.getElementById("reply-area");
     replyArea.classList.remove("hide");
 
 }
-function hideReply() {
-    var commentArea = document.getElementById("reply-area");
-    commentArea.classList.add("hide");
-}
+// function hideReply() {
+//     var commentArea = document.getElementById("reply-area");
+//     commentArea.classList.add("hide");
+// }
