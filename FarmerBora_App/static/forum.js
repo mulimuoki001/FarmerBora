@@ -23,8 +23,8 @@ function showComment() {
 //     var commentArea = document.getElementById("comment-area");
 //     commentArea.classList.add("hide");
 // }
-function showReply() {
-    var replyArea = document.getElementById("reply-area");
+function showReply(id) {
+    var replyArea = document.getElementById(id);
     replyArea.classList.remove("hide");
 
 }
