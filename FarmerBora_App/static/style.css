@@ -373,7 +373,7 @@ section{
 }
 
 .side-bar .navbar a:hover{
-   background-color: var(--light-bg);
+   background-color: blue;
 }
 
 .side-bar .navbar a:hover i{
